@@ -1,0 +1,100 @@
+/* Definición variables */
+:root{
+    --color-principal: #FFF;
+    --color-secondary:#04B4E0;
+    --color-background:#F2F7F9;
+    --color-transparent:transparent;
+    --color-icons: #B5B6B7;
+    --color-titles: #222;
+    --color-subtitles: #888;
+    --color-text: #555;
+}
+
+/* Estilos generales */
+html{
+    font-size: 10px;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--color-titles);
+}
+
+/* Imagen de fondo */
+body{
+    background-image: url("../img/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -20px -120px;
+}
+
+/* Estrcutura principal*/
+.layout{
+    position: relative;
+    min-width: 1290px;
+    width: 75%;
+    height: 80vh;
+    min-height: 80vh;    
+    margin: 10vh auto;
+
+    display: grid;
+    grid-template-areas: 
+        "aside content";
+    grid-template-columns: 30% 70%;
+
+    /* sombra del layout*/
+    border-radius: 4rem;
+    box-shadow: 0 0 100px -5px rgba(0, 0, 0, 0.25);
+     
+}
+
+/* Barra lateral azul */
+.layout__aside{
+    grid-area: aside;
+    border-radius: 4rem 0 0 4rem;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.aside__user-info{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+
+    min-height: 100%;
+    min-width: 30rem;
+
+    background-color: var(--color-secondary);
+    color: var(--color-principal);
+}
+
+.user-info__container-image{
+    position: relative;
+    display: inline-block;
+    width: 18rem;
+    margin-top: 7rem;
+    background-color: var(--color-principal);
+    border: 3px solid var(--color-principal);
+    border-radius: 20rem;
+    overflow: hidden;
+}
+
+.user-info__image{
+    width: 100%;
+}
+
+/* Contenedor principal */
+.layout__content{
+    grid-area: content;
+}
+
