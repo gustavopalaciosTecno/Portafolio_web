@@ -22,7 +22,7 @@ body{
     font-size: 1.5rem;
     background-color: var(--color-background);
     color: var(--color-text);
-    overflow: hidden;
+    overflow: hidden;  /* ESTE VALOR FUE MODIFICADO para que no haga scroll*/
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -61,6 +61,7 @@ body{
 .layout__aside{
     grid-area: aside;
     border-radius: 4rem 0 0 4rem;
+    /*height: 1500px; *//* ESTE VALOR FUE AGREGADO-SI SE MODIFICA TAMBIEN MODIFICAR EN BODY*/
     overflow: auto;
     overflow-x: hidden;
 }
@@ -70,7 +71,7 @@ body{
     flex-direction: column;
     align-items:center;
     text-align: center;
-
+    
     min-height: 100%;
     min-width: 30rem;
 
@@ -116,6 +117,7 @@ body{
     opacity: 0.4;
     border-radius: 30rem;
 }
+ 
 
 .user-info__name{
     margin-top: 2.6rem;
@@ -198,8 +200,8 @@ body{
 }
 
 .content__page{
-    background-color: var(--color-principal);
     min-height: 100%;
+    background-color: var(--color-principal);
     border-radius: 3.2rem;
 
     display: flex;
@@ -282,4 +284,14 @@ body{
 
 }
 
+/* Modificar estilos sobre mi */
+.content__about{
+    display: block;
+    height: 100%;
+    min-height: 100%;
+    padding: 6rem;
+    padding-right: 3rem;
+    overflow: auto;
+      
+}
 
