@@ -30,7 +30,8 @@ ul, ol{
 a{
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #fff;  /* este valor afecta algunos enlaces */
+   
 }
 
 p a{
