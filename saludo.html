@@ -11,7 +11,62 @@
      <link rel="stylesheet" href="assets/css/scroll.css">
     <link rel="stylesheet" href="assets/css/styles.css">
    
-    <title>Portafolio - Néstor Gustavo Palacios Meyer </title>
+    <title>¡Gracias por escribirnos! </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 400px;
+            border-top: 8px solid #04B4E0; /* El azul de tu marca */
+        }
+        .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        h1 {
+            font-weight: 600;
+            color: #004b5c;
+            margin-bottom: 10px;
+        }
+        p {
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .progress-bar {
+            height: 4px;
+            width: 100%;
+            background: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #04B4E0;
+            width: 0%;
+            animation: loading 5s linear forwards;
+        }
+        @keyframes loading {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+    </style>
 </head>
 <body>
 
@@ -139,8 +194,17 @@
 
 
 </section>
+<div class="container">
+        <span class="icon" style="text-align: center;">✨</span>
+        <h1>¡Muchas gracias!</h1>
+        <p>Tu mensaje ha sido recibido con éxito.<br><strong>Te responderemos a la brevedad.</strong></p>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 15px; color: #888;">Volviendo al portafolio...</p>
+    </div>
 
-<h2>¡Gracias! Te responderemos a la brevedad</h2>
+
         </section>
     </main>
 </div>
