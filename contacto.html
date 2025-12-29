@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilos-->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+     <link rel="stylesheet" href="assets/css/scroll.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+   
+    <title>Portafolio - Néstor Gustavo Palacios Meyer </title>
+</head>
+<body>
+
+
+<!--layout principal-->
+<div class="layout">
+    <!--Barra lateral (Info del usuario)-->
+    <aside class="layout__aside">
+        <section class="aside__user-info">
+            <!--Información general del usuario-->
+            <div class="user-info__general">
+                <div class="user-info__container-image">
+                    <img src="assets/img/gustavo_developer.png" alt="desarrollador" class="user-info__image">
+                </div>
+                <!-- <h2 class="user-info__name">Néstor Gustavo Palacios Meyer</h2>
+                <h4 class="user-info__job">Desarrollador Web</h4> -->
+            </div>
+
+            <!--Menú de navegación-->
+                
+            <nav class="layout__menu">
+                
+                <ul class="menu__list">
+
+                    <li class="menu__option">
+                        <a href="index.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-house"></i>
+                            <span class="menu__overlay">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="menu__option">
+                        <a href="sobre-mi.html" class="menu__link">
+                             <i class="menu__icon fa-solid fa-user"></i>
+                            <span class="menu__overlay">Sobre mi</span>
+                        </a>
+                    </li>
+
+                    <li class="menu__option">
+                        <a href="estudios.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                            <span class="menu__overlay">Estudios</span>
+                        </a>
+                    </li>
+
+                    <li class="menu__option">
+                        <a href="portafolio.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-briefcase"></i>
+                            <span class="menu__overlay">Portafolio</span>
+                        </a>
+                    </li>
+
+
+                    <li class="menu__option">
+                        <a href="blog.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-book"></i>
+                            <span class="menu__overlay">Blog</span>
+                        </a>
+                    </li>
+
+                     <li class="menu__option">
+                        <a href="contacto.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-envelope"></i>
+                            <span class="menu__overlay">Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Links a redes sociales-->
+
+            <div class="user-info__links">
+                <ul class="links__social">
+
+                    <li class="social__option">
+                        <a href="#" class="social__link">
+                            <i class="social__icon fa-brands fa-youtube" style="color: antiquewhite;"></i>
+                        </a>
+                    </li>
+
+                     <li class="social__option">
+                        <a href="#" class="social__link">
+                            <i class="social__icon fa-brands fa-linkedin" style="color: antiquewhite;"></i>
+                        </a>
+                    </li>
+
+                     <li class="social__option">
+                        <a href="#" class="social__link">
+                            <i class="social__icon fa-brands fa-instagram" style="color: antiquewhite;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Botón del curriculum-->
+
+            <div class="user-info__buttons">
+                <a href="#" class="user-info__btn">Descargar CV</a>
+            </div>
+
+            <!--Pie de página-->
+            <footer class="user-info__footer">
+                &copy; 2025 Néstor Gustavo Palacios Meyer
+            </footer>
+        </section>
+    </aside>
+    <!--Contenido principal-->
+    <main class="layout__content">
+        <section class="content__page content__about">
+            <!--Este contenido cambia en cada sitio web-->
+
+            <!-- <header class="about__header">
+                <h1 class="about__title">Sobre <span class="title__color">Mi</span></h1>
+            </header> -->
+            <!-- <section class="about__personal-info">
+                <article class="personal-info__bio">
+                    <p class="personal-info__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic porro facere atque laudantium asperiores dignissimos veritatis ratione rerum error. Nemo officia incidunt optio temporibus alias consequuntur rem aliquid reiciendis libero?, ea eum, fugit nihil nulla unde doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </article>
+                <div class="personal-info__data">
+                    <ul class="personal-info__list">
+                        <li class="personal-info__option">
+                            <span class="personal-info__title">Edad</span>
+                            <span class="personal-info__value">44</span>
+                        </li>
+
+                         <li class="personal-info__option">
+                            <span class="personal-info__title">País</span>
+                            <span class="personal-info__value">Argentina</span>
+                        </li>
+
+                         <li class="personal-info__option">
+                            <span class="personal-info__title">Dirección</span>
+                            <span class="personal-info__value">Barrio Arrudi</span>
+                        </li>
+
+                         <li class="personal-info__option">
+                            <span class="personal-info__title">Correo electrónico</span>
+                            <span class="personal-info__value">nestorgustavo@serviciospalaciosweb.com</span>
+                        </li>
+
+                        <li class="personal-info__option">
+                            <span class="personal-info__title">Teléfono</span>
+                            <span class="personal-info__value">766 888 999</span>
+                        </li>
+                    </ul>
+                </div>
+            </section> -->
+
+            <section class="about__services">
+               <!-- <header class="services__header">
+                    <h2 class="services__title">
+                        Lo que <span class="title__color">hago</span>
+                    </h2>
+               </header> -->
+               <div class="services__container">
+                    <!-- <article class="services__service">
+                        <div class="service__icon">
+                            <i class="service__real-icon fa-solid fa-code"></i>
+                        </div>
+                        <div class="service__content">
+                            <h3 class="service__title">Programación</h3>
+                            <p class="service__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, sequi? Quibusdam nesciunt tempore ducimus a. Expedita vitae excepturi consectetur veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat ab? Dolorem adipisci reiciendis voluptatibus aut corporis. Quod officia ducimus quaerat, rerum perspiciatis.
+                                
+                            </p>
+                        </div>
+                    </article> -->
+
+                    <!-- <article class="services__service">
+                        <div class="service__icon">
+                            <i class="service__real-icon fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <div class="service__content">
+                            <h3 class="service__title">Formación</h3>
+                            <p class="service__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi adipisci impedit accusamus ipsa quaerat, fugit maxime explicabo ducimus officia cumque. Expedita omnis iusto similique ducimus dolores illum. Corrupti, voluptatem voluptates.
+
+                            </p>
+                        </div>
+                    </article> -->
+
+                    <!-- <article class="services__service">
+                        <div class="service__icon">
+                            <i class="service__real-icon fa-solid fa-computer"></i>
+                        </div>
+                        <div class="service__content">
+                            <h3 class="service__title">Desarrollo Web</h3>
+                            <p class="service__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi adipisci impedit accusamus ipsa quaerat, fugit maxime explicabo ducimus officia cumque. Expedita omnis iusto similique ducimus dolores illum. Corrupti, voluptatem voluptates.
+
+                            </p>
+                        </div>
+                    </article> -->
+
+                    <!-- <article class="services__service">
+                        <div class="service__icon">
+                            <i class="service__real-icon fa-solid fa-terminal"></i>
+                        </div>
+                        <div class="service__content">
+                            <h3 class="service__title">Administración de Sistemas</h3>
+                            <p class="service__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi adipisci impedit accusamus ipsa quaerat, fugit maxime explicabo ducimus officia cumque. Expedita omnis iusto similique ducimus dolores illum. Corrupti, voluptatem voluptates.
+
+                            </p>
+                        </div>
+                    </article> -->
+               </div>
+            </section>
+            <section class="about__reviews">
+                <!-- <header class="reviews__header">
+                    <h2 class="reviews__title">Reseñas</h2>
+                </header> -->
+                <div class="reviews__container">
+                    <!-- <article class="reviews__review">
+                        <div class="review__image-container">
+                            <img src="assets/img/testimonio1.jpg" class="review__image" alt="imagen de testimonio">
+                        </div>
+
+                        <div class="review__description">
+                            <p class="review__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod, debitis aperiam dolore quos, necessitatibus delectus quae pariatur sequi ipsa eius. Vel numquam eius repellendus quae deleniti ducimus, saepe magni.</p>
+                        </div>
+
+                        <div class="review__author">
+                            <div class="review__author-info">
+                                <h4 class="review__name">Ana López</h4>
+                                <h5 class="review__company">Developers S.A.</h5>
+                            </div>
+
+                            <div class="review__author-icon">
+                                <i class="review__icon fa-solid fa-quote-right"></i>
+                            </div>
+                        </div>
+                    </article> -->
+
+                    <!--Agregamos otros artículo-->
+                     <!-- <article class="reviews__review">
+                        <div class="review__image-container">
+                            <img src="assets/img/testimonio2.jpg" class="review__image" alt="imagen de testimonio">
+                        </div>
+
+                        <div class="review__description">
+                            <p class="review__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod, debitis aperiam dolore quos, necessitatibus delectus quae pariatur sequi ipsa eius. Vel numquam eius repellendus quae deleniti ducimus, saepe magni.</p>
+                        </div>
+
+                        <div class="review__author">
+                            <div class="review__author-info">
+                                <h4 class="review__name">Rubén Martinez</h4>
+                                <h5 class="review__company">FullStack S.A.</h5>
+                            </div>
+
+                            <div class="review__author-icon">
+                                <i class="review__icon fa-solid fa-quote-right"></i>
+                            </div>
+                        </div>
+                    </article> -->
+
+                    <!--Fin del segundo artículo-->
+                </div>
+
+            </section>
+
+            <!-- <section class="about__clients">
+                <header class="clients__header">
+                    <h2 class="clients__title">Clientes</h2>
+                </header>
+                <div class="clients__container">
+                    <article class="clients__item">
+                        <a href="#" class="clients__link">
+                            <img src="assets/img/cliente-servicios.png" alt="logo del cliente" class="clients__image">
+                        </a>
+                    </article>
+
+                    <article class="clientes__item">
+                        <a href="#" class="clients__link">
+                            <img src="assets/img/cliente-2.png" alt="logo del cliente" class="clients__image">
+                        </a>
+                    </article>
+
+                    <article class="clientes__item">
+                        <a href="#" class="clients__link">
+                            <img src="assets/img/cliente-3.png" alt="logo del cliente" class="clients__image">
+                        </a>
+                    </article>
+
+                    <article class="clientes__item">
+                        <a href="#" class="clients__link">
+                            <img src="assets/img/cliente-4.png" alt="logo del cliente" class="clients__image">
+                        </a>
+                    </article>
+
+                    <article class="clientes__item">
+                        <a href="#" class="clients__link">
+                            <img src="assets/img/cliente-5.png" alt="logo del cliente" class="clients__image">
+                        </a>
+                    </article>
+                </div>
+            </section> -->
+
+            <!-- <section class="about__prices">
+                <header class="prices__header">
+                    <h2 class="prices__title">Precios</h2>
+                </header>
+                <div class="prices__container">
+                    <article class="prices__box">
+                        <div class="prices__subtitle">
+                            <span class="prices__text">Normal</span>
+                        </div>
+
+                        <div class="prices__price">
+                                <span class="price__number">20.000$</span>
+                                <small class="price__advice">Al mes</small>
+                        </div>
+
+                        <div class="prices__buy">
+                            <a href="#" class="prices__btn">Prueba gratis</a>
+                        </div>
+
+                        <div class="prices__reward">
+                            Un curso de desarrollo web
+                        </div>
+
+                         <div class="prices__reward">
+                            Soporte a preguntas y dudas
+                        </div>
+
+                         <div class="prices__reward">
+                            Certificado de finalización
+                        </div>
+                    </article>
+
+                    <article class="prices__box">
+                        <div class="prices__subtitle">
+                            <span class="prices__text">Premium</span>
+                        </div>
+
+                        <div class="prices__price">
+                                <span class="price__number">50.000$</span>
+                                <small class="price__advice">Al mes</small>
+                        </div>
+
+                        <div class="prices__buy">
+                            <a href="#" class="prices__btn">Prueba gratis</a>
+                        </div>
+
+                        <div class="prices__reward">
+                           Cinco cursos de desarrollo web
+                        </div>
+
+                         <div class="prices__reward">
+                            Soporte a preguntas y dudas prioritario
+                        </div>
+
+                         <div class="prices__reward">
+                            Certificado de finalización
+                        </div>
+                    </article>
+                </div>
+
+            </section> -->
+
+            <!-- <section class="about__extra">
+                <header class="extra__header">
+                    <h2 class="extra__title">Información<span class="title__color">Extra</span></h2>
+                </header>
+
+                <div class="extra__container">
+                    <article class="extra__info">
+                        <i class="extra__icon fa-solid fa-heart"></i>
+                        <h4 class="extra__subtitle">Alumnos contentos</h4>
+                        <span class="extra__quatity">5000</span>
+                    </article>
+
+                    <article class="extra__info">
+                        <i class="extra__icon fa-solid fa-clock"></i>
+                        <h4 class="extra__subtitle">Horas de contenido</h4>
+                        <span class="extra__quatity">500</span>
+                    </article>
+
+                    <article class="extra__info">
+                        <i class="extra__icon fa-solid fa-star"></i>
+                        <h4 class="extra__subtitle">Puntuación</h4>
+                        <span class="extra__quatity">10</span>
+                    </article>
+                </div>
+            </section>
+            <section class="about__extra"> -->
+    <!-- <header class="extra__header">
+        <h2 class="extra__title">Enviar <span class="title__color">Propuesta</span></h2>
+    </header> -->
+    
+<section class="about__extra">
+    <header class="extra__header">
+        <h2 class="extra__title">Formulario de<span class="title__color">Contacto:</span></h2>
+    </header>
+
+<div class="form-container" style="width: 100%; margin-top: 2rem; border-radius: 20px; overflow: hidden; background-color:#04B4E0;">
+    <iframe 
+        id="n8n-form"
+        src="https://n8n1.serviciospalaciosweb.com/form/c69dce6e-0e8a-492b-bc4f-234e086bd5d4?v=update_final" 
+        width="100%" 
+        style="border: none; height: 1100px; display: block; background-color: #04B4E0;"
+        scrolling="no">
+        Cargando formulario...
+    </iframe>
+</div>
+</section>
+
+
+        </section>
+    </main>
+</div>
+<script>
+    /* Ajuste dinámico: Si el formulario es más largo que 800px, 
+       este script intenta detectar el cambio y ajustar el contenedor.
+    */
+    const iframe = document.getElementById('n8n-form');
+    
+    // Función para ajustar la altura si el dominio lo permite
+    function adjustHeight() {
+        try {
+            if (iframe.contentWindow.document.body.scrollHeight) {
+                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+            }
+        } catch (e) {
+            // Si hay restricción de CORS, el 'min-height' de 800px arriba asegura que se vea bien
+            console.log("Ajuste automático limitado por seguridad (CORS), usando altura fija.");
+        }
+    }
+
+    iframe.onload = adjustHeight;
+    window.addEventListener('resize', adjustHeight);
+</script>
+</body>
+</html>

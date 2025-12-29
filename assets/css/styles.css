@@ -631,3 +631,107 @@ body{
     font-size: 1.4rem;
     padding: 0.6rem 0;
 }
+
+
+/* CAMBIOS TODAVÍA  NO GUARDADOS EN GITHUB */
+/* ============================================================
+   DISEÑO RESPONSIVO CONSOLIDADO
+   ============================================================ */
+
+/* 1. Laptops y tablets grandes (Ajustes de ancho) */
+@media (max-width: 1200px) {
+    .layout {
+        width: 95%;
+        min-width: auto !important;
+        grid-template-columns: 30% 70%;
+    }
+}
+
+/* 2. Tablets y móviles (Cambio a una sola columna y Menú Inferior) */
+@media (max-width: 992px) {
+    body {
+        overflow: auto !important; /* Permitir scroll para ver todo el contenido */
+        background-position: center;
+    }
+
+    /* Layout en una sola columna vertical */
+    .layout {
+        display: flex;
+        flex-direction: column;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 2rem auto 10rem auto !important; /* Espacio extra abajo para que el menú no tape nada */
+        width: 92% !important;
+        grid-template-areas: none; 
+    }
+
+    /* Ajuste de bordes para que encajen verticalmente */
+    .layout__aside {
+        border-radius: 4rem 4rem 0 0 !important;
+        width: 100% !important;
+    }
+
+    .layout__content {
+        border-radius: 0 0 4rem 4rem !important;
+        width: 100% !important;
+    }
+
+    /* --- MENÚ INFERIOR TIPO APP --- */
+    .layout__menu {
+        display: block !important; /* Asegurar que se vea */
+        position: fixed !important;
+        top: auto !important;
+        bottom: 2rem !important;
+        right: 50% !important;
+        transform: translateX(50%) !important;
+        width: 90% !important;
+        max-width: 400px;
+        min-width: auto !important;
+        z-index: 999;
+    }
+
+    .menu__list {
+        flex-direction: row !important; /* Íconos horizontales */
+        justify-content: space-around !important;
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 1.2rem !important;
+        margin-left: 0 !important;
+        border-radius: 5rem !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+    }
+
+    .menu__option { width: auto !important; }
+    .menu__icon { font-size: 2.4rem !important; }
+    .menu__overlay { display: none !important; } /* Ocultar texto flotante */
+
+    /* Ajuste de elementos internos a 1 sola columna */
+    .services__service, 
+    .reviews__review, 
+    .prices__box,
+    .about__personal-info {
+        flex-basis: 100% !important;
+        margin-right: 0 !important;
+        flex-direction: column !important;
+    }
+}
+
+/* 3. Teléfonos pequeños (Ajustes de texto y espaciado) */
+@media (max-width: 576px) {
+    .page__name {
+        font-size: 3.5rem !important;
+        text-align: center;
+    }
+
+    .content__about {
+        padding: 3rem 2rem !important;
+    }
+
+    .about__title { font-size: 2.6rem !important; }
+
+    /* Ajuste del formulario */
+    .form-container {
+        margin-top: 1rem;
+        border-radius: 15px;
+    }
+}
