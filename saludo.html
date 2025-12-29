@@ -209,8 +209,16 @@
     </main>
 </div>
 <script>
-  // Esto fuerza a que la redirección sea en la ventana principal, no dentro del formulario
-  window.top.location.href = "https://portafoliopalacios.netlify.app/saludo";
+  // 1. Si la página está dentro de un frame (el formulario de n8n), 
+  // obliga a la ventana principal a cargar esta página de saludo completa.
+  if (window.top !== window.self) {
+      window.top.location.href = window.self.location.href;
+  }
+
+  // 2. Después de 5 segundos, redirige de vuelta a la sección de contacto.
+  setTimeout(function() {
+      window.top.location.href = "https://portafoliopalacios.netlify.app/contacto";
+  }, 5000);
 </script>
 </body>
 </html>
