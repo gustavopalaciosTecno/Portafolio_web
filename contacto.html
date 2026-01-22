@@ -453,11 +453,12 @@
 
 
   // Escuchar mensajes del iframe para redirección total
-  window.addEventListener('message', function(event) {
-    if (event.data === 'formSubmitted') {
+ window.addEventListener('message', function(event) {
+   if (event.data === 'formSubmitted') {
+      // window.top asegura que cambie toda la pestaña, no solo el iframe
       window.top.location.href = 'https://portafoliopalacios.netlify.app/contacto.html';
-    }
-  }, false);
+   }
+}, false);
 </script>
 </body>
 
