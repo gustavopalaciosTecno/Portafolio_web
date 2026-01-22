@@ -451,9 +451,7 @@
     iframe.onload = adjustHeight;
     window.addEventListener('resize', adjustHeight);
 
-</script>
-</body>
-<script>
+
   // Escuchar mensajes del iframe para redirección total
   window.addEventListener('message', function(event) {
     if (event.data === 'formSubmitted') {
@@ -461,4 +459,6 @@
     }
   }, false);
 </script>
+</body>
+
 </html>
