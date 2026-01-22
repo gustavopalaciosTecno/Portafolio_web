@@ -451,14 +451,27 @@
     iframe.onload = adjustHeight;
     window.addEventListener('resize', adjustHeight);
 
+  // 1. Escuchar si el iframe redirigió internamente
+if (window.location.search.includes('status=success')) {
+    // Si la URL principal ya tiene el parámetro, forzamos la carga limpia
+    window.location.href = 'https://portafoliopalacios.netlify.app/contacto.html';
+}
 
-  // Escuchar mensajes del iframe para redirección total
- window.addEventListener('message', function(event) {
+// 2. Escuchar mensajes (por si acaso n8n permite el postMessage en el futuro)
+window.addEventListener('message', function(event) {
    if (event.data === 'formSubmitted') {
-      // window.top asegura que cambie toda la pestaña, no solo el iframe
       window.top.location.href = 'https://portafoliopalacios.netlify.app/contacto.html';
    }
 }, false);
+
+// 3. Solución para el "encimado" (Bust Iframe)
+if (window.top !== window.self) {
+    // Si esta página se está cargando DENTRO de un iframe (el encimado)
+    // forzamos a que se convierta en la ventana principal
+    window.top.location.href = window.self.location.href;
+}  
+
+
 </script>
 </body>
 
