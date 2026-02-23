@@ -412,66 +412,36 @@
         Cargando formulario...
     </iframe>
 </div> -->
-<div class="form-container" style="width: 100%; margin-top: 2rem; border-radius: 20px; overflow: hidden; background-color:#04B4E0; margin-bottom:1rem;">
+<div class="form-container" style="width: 100%; margin-top: 2rem; border-radius: 20px; overflow: hidden; background-color:#04B4E0; margin-bottom:1rem; -webkit-overflow-scrolling: touch;">
     <iframe 
-    id="n8n-form"
-    src="https://n8n.serviciospalaciosweb.com/form/c69dce6e-0e8a-492b-bc4f-234e086bd5d4" 
-    width="100%" 
-    style="border: none; height: 1100px; display: block; background-color: #04B4E0;"
-    scrolling="no"
-  
-    sandbox="allow-scripts allow-same-origin allow-forms allow-top-navigation allow-top-navigation-by-user-activation">
-    Cargando formulario...
-</iframe>
+        id="n8n-form"
+        src="https://n8n.serviciospalaciosweb.com/form/c69dce6e-0e8a-492b-bc4f-234e086bd5d4" 
+        width="100%" 
+        style="border: none; min-height: 600px; height: 100vh; display: block; background-color: #ffffff;"
+        scrolling="yes"> Cargando formulario...
+    </iframe>
 </div>
-</section>
 
-
-        </section>
-    </main>
-</div>
 <script>
-    /* Ajuste dinámico: Si el formulario es más largo que 800px, 
-       este script intenta detectar el cambio y ajustar el contenedor.
-    */
     const iframe = document.getElementById('n8n-form');
-    
-    // Función para ajustar la altura si el dominio lo permite
-    function adjustHeight() {
-        try {
-            if (iframe.contentWindow.document.body.scrollHeight) {
-                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-            }
-        } catch (e) {
-            // Si hay restricción de CORS, el 'min-height' de 800px arriba asegura que se vea bien
-            console.log("Ajuste automático limitado por seguridad (CORS), usando altura fija.");
+
+    // Eliminamos la función adjustHeight que causa el conflicto de CORS
+    // En su lugar, usamos una altura fija de respaldo que funcione en móviles
+    function setResponsiveHeight() {
+        if (window.innerWidth < 480) {
+            iframe.style.height = "850px"; // Altura estimada para móvil
+        } else {
+            iframe.style.height = "1100px"; // Altura para PC
         }
     }
 
-    iframe.onload = adjustHeight;
-    window.addEventListener('resize', adjustHeight);
+    window.addEventListener('load', setResponsiveHeight);
+    window.addEventListener('resize', setResponsiveHeight);
 
-  // 1. Escuchar si el iframe redirigió internamente
-if (window.location.search.includes('status=success')) {
-    // Si la URL principal ya tiene el parámetro, forzamos la carga limpia
-    window.location.href = 'https://portafoliopalacios.netlify.app/contacto.html';
-}
-
-// 2. Escuchar mensajes (por si acaso n8n permite el postMessage en el futuro)
-window.addEventListener('message', function(event) {
-   if (event.data === 'formSubmitted') {
-      window.top.location.href = 'https://portafoliopalacios.netlify.app/contacto.html';
-   }
-}, false);
-
-// 3. Solución para el "encimado" (Bust Iframe)
-if (window.top !== window.self) {
-    // Si esta página se está cargando DENTRO de un iframe (el encimado)
-    // forzamos a que se convierta en la ventana principal
-    window.top.location.href = window.self.location.href;
-}  
-
-
+    // Lógica de redirección original (mantenida)
+    if (window.location.search.includes('status=success')) {
+        window.location.href = 'https://portafoliopalacios.netlify.app/contacto.html';
+    }
 </script>
 </body>
 
