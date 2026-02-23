@@ -194,31 +194,28 @@
 
 
 </section>
-<div class="container">
-        <span class="icon" style="text-align: center;">✨</span>
-        <h1>¡Muchas gracias!</h1>
-        <p>Tu mensaje ha sido recibido con éxito.<br><strong>Te responderemos a la brevedad.</strong></p>
-        <div class="progress-bar">
-            <div class="progress-fill"></div>
-        </div>
-        <p style="font-size: 0.8rem; margin-top: 15px; color: #888;">Volviendo al portafolio...</p>
+<div class="container" style="font-family: 'Poppins', sans-serif; text-align: center; padding: 40px 20px;">
+    <span class="icon" style="font-size: 3rem;">✨</span>
+    <h1 style="color: #004b5c;">¡Muchas gracias!</h1>
+    <p>Tu mensaje ha sido recibido con éxito.<br><strong>Te responderemos a la brevedad.</strong></p>
+    
+    <div class="progress-bar" style="width: 100%; background: #eee; height: 8px; border-radius: 4px; margin: 20px 0; overflow: hidden;">
+        <div class="progress-fill" style="background: #04B4E0; height: 100%; width: 0%; transition: width 4s linear;"></div>
     </div>
-
-
-        </section>
-    </main>
+    
+    <p style="font-size: 0.8rem; color: #888;">Volviendo al portafolio...</p>
 </div>
-<script>
-  // 1. Si la página está dentro de un frame (el formulario de n8n), 
-  // obliga a la ventana principal a cargar esta página de saludo completa.
-  if (window.top !== window.self) {
-      window.top.location.href = window.self.location.href;
-  }
 
-  // 2. Después de 5 segundos, redirige de vuelta a la sección de contacto.
+<script>
+  // Iniciamos la barrita visualmente
+  setTimeout(() => {
+      const fill = document.querySelector('.progress-fill');
+      if(fill) fill.style.width = '100%';
+  }, 100);
+
+  // Redirigimos la ventana PADRE después de 4 segundos
+  // Usamos window.parent para no "romper" el frame bruscamente
   setTimeout(function() {
-      window.top.location.href = "https://portafoliopalacios.netlify.app/contacto";
-  }, 5000);
+      window.parent.location.href = "https://portafoliopalacios.netlify.app/contacto.html";
+  }, 4000);
 </script>
-</body>
-</html>
